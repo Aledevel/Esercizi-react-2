@@ -4,7 +4,8 @@ import useSWR from "swr";
 
 const fetcher = (url) => fetch(url).then((response) => response.json());
 
-export function PokeSWR(){const { data, error } = useSWR(`https://pokeapi.co/api/v2/pokemon`, fetcher);
+export function PokeSWR(){
+  const { data, error } = useSWR(`https://pokeapi.co/api/v2/pokemon`, fetcher);
   
   return (
     <div>
